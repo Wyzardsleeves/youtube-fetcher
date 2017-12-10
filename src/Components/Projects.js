@@ -5,7 +5,7 @@ class Projects extends Component {
     return (
       <div className="Projects">
         <section className="project-head">
-          <h3>Projects</h3>
+          <h3>PROJECTS</h3>
         </section>
         <section className="project-list">
           <div className="model-1">

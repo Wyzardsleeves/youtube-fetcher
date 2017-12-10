@@ -3,6 +3,8 @@ import Youtube from "./Components/Youtube";
 import Projects from "./Components/Projects";
 import Subhead from "./Components/Subhead";
 import Mainhead from "./Components/Mainhead";
+import RightPanel from "./Components/RightPanel";
+
 
 import './App.css';
 
@@ -25,6 +27,10 @@ class App extends Component {
         <div className="projects-contain">
           {/* Projects will be loaded here */}
           <Projects />
+        </div>
+        <div className="right-panel">
+          {/* Projects will be loaded here */}
+          <RightPanel />
         </div>
       </div>
     );

@@ -20,7 +20,10 @@ class Youtube extends Component {
   };
 
   vidGrab(){
-    axios.get('')
+    axios.get('GET',
+              '/youtube/v3/channels',
+              {'id': 'UCLn0jCRt_zJfsMhR1WFswzw',
+               'part': 'snippet,contentDetails,statistics'})
       .then(function (response) {
         console.log(response);
       })
@@ -29,13 +32,23 @@ class Youtube extends Component {
       });
   }
 
+  makeMain(){
+
+  }
+
   render() {
     return (
       <div>
         <div className="Youtube">
-          <iframe width="1120" height="630" src="https://www.youtube.com/embed/TGEqyjDAnpk"
-          frameBorder="0" gesture="media" allow="encrypted-media"
-          allowFullScreen></iframe>
+          <div className="youtube-main">
+            <iframe width="1120" height="630" src="https://www.youtube.com/embed/TGEqyjDAnpk"
+            frameBorder="0" gesture="media" allow="encrypted-media"
+            allowFullScreen></iframe>
+          </div>
+          <div className="youtube-thumbs">
+            <li onclick={() => this.makeMain()}></li>
+            <li onclick={() => this.makeMain()}></li>
+          </div>
         </div>
       </div>
     );
