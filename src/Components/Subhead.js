@@ -10,7 +10,7 @@ class Subhead extends Component {
 
   render(){
     return(
-      <div>
+      <div className="contain">
         <h3>WEB DEVELOPER</h3>
         <h4>Justin Lattimore</h4>
         <p>Hey, I'm an up and coming Web Developer from North Carolina with a 3D and Graphic Design background. I'm mostly familiar with HTML, CSS, jQuery, React.js and Ruby on Rails.</p>

@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import axios from "axios";
 //AIzaSyCKtZ3QLnakjbuDpfAl-i3vL_zQ_AehjX0
 
+/* API Key for "youtube-fetcher"
+
+key=API_KEY
+AIzaSyB2WdeBFHh2GQeOQjPtSmy1eW3f3ht-fAs
+
+*/
+
 class Youtube extends Component {
   constructor(props){
     super(props);
@@ -19,37 +26,43 @@ class Youtube extends Component {
 
   //function makes the thumbnail the main vid
   vidMain(){
-
+    this.setState.vidList =
   }
-
-  vidList(){
-
-  };
 
   //the actual fetcher of videos
   vidGrab(){
-    axios.get('GET',
-              '/youtube/v3/channels',
-              {'id': 'UCLn0jCRt_zJfsMhR1WFswzw',
-               'part': 'snippet,contentDetails,statistics'})
-      .then(function (response) {
-        console.log(response);
+    axios.get('')
+      .then(response => {
+        this.setState({vidList: response.data}, function(){
+          console.log(this.state.vidList);
+        });
       })
-      .catch(function (error) {
+      .catch(function (error){
         console.log(error);
       });
+
+    /*
+      axios.get('GET',
+        '/youtube/v3/channels',
+        {'id': 'UCLn0jCRt_zJfsMhR1WFswzw',
+         'part': 'snippet,contentDetails,statistics'})
+    */
   }
 
   render() {
     return (
       <div>
-        <div className="Youtube">
-          <div className="youtube-main">
-            <iframe width="1120" title="mainVidFrame" height="630" src={"https://www.youtube.com/embed/" + this.state.currentVid}
+        <div className="container youtube-frame">
+          <div className="youtube-frame-main">
+            <iframe width="1120" height="630" title="mainVidFrame"
+            src={"https://www.youtube.com/embed/" + this.state.currentVid}
             frameBorder="0" gesture="media" allow="encrypted-media"
-            allowFullScreen></iframe>
+            allowFullScreen>
+            </iframe>
           </div>
-          <div className="youtube-thumbs">
+        </div>
+        <div className="container youtube-thumb">
+          <div className="youtube-thumbs-main">
             <ul>
               <li><img src={this.vidThumb + 0} alt="thumbSlot1"></img></li>
               <li><img src={this.vidThumb + 1} alt="thumbSlot2"></img></li>

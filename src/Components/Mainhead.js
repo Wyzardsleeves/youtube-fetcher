@@ -10,7 +10,7 @@ class Mainhead extends Component {
 
   render(){
     return(
-      <div>
+      <div className="mainhead-contain">
         <h2>Title</h2>
       </div>
     )
