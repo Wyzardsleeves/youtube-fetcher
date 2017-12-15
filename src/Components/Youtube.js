@@ -4,8 +4,9 @@ import axios from "axios";
 
 /* API Key for "youtube-fetcher"
 
-key=API_KEY
-AIzaSyB2WdeBFHh2GQeOQjPtSmy1eW3f3ht-fAs
+Youtube API Key: AIzaSyB2WdeBFHh2GQeOQjPtSmy1eW3f3ht-fAs
+YouTube Channel ID: UCDN5MWIT0kbAWwsxTHFgt_g
+YouTube User ID: DN5MWIT0kbAWwsxTHFgt_g
 
 */
 
@@ -26,14 +27,14 @@ class Youtube extends Component {
 
   //function makes the thumbnail the main vid
   vidMain(){
-    this.setState.vidList =
+    this.setState.vidList = [];
   }
 
   //the actual fetcher of videos
   vidGrab(){
-    axios.get('')
+    axios.get("https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&allThreadsRelatedToChannelId=UCDN5MWIT0kbAWwsxTHFgt_g&key=AIzaSyB2WdeBFHh2GQeOQjPtSmy1eW3f3ht-fAs")
       .then(response => {
-        this.setState({vidList: response.data}, function(){
+        this.setState({vidList: response.data.items}, function(){
           console.log(this.state.vidList);
         });
       })
