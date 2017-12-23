@@ -8,7 +8,10 @@ Youtube API Key: AIzaSyB2WdeBFHh2GQeOQjPtSmy1eW3f3ht-fAs
 YouTube Channel ID: UCDN5MWIT0kbAWwsxTHFgt_g
 YouTube User ID: DN5MWIT0kbAWwsxTHFgt_g
 
+Base URL link: https://www.googleapis.com/youtube/v3/search?part=snippet%20&channelId=UCDN5MWIT0kbAWwsxTHFgt_g&key=AIzaSyB2WdeBFHh2GQeOQjPtSmy1eW3f3ht-fAs
 */
+
+const baseYoutubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet%20&channelId=UCDN5MWIT0kbAWwsxTHFgt_g&key=AIzaSyB2WdeBFHh2GQeOQjPtSmy1eW3f3ht-fAs";
 
 class Youtube extends Component {
   constructor(props){
@@ -22,18 +25,18 @@ class Youtube extends Component {
   //state changese go through here
   componentWillMount(){
     this.vidGrab();
-    this.vidMain();
+    this.vidChange();
   };
 
   //function makes the thumbnail the main vid
-  vidMain(){
-    this.setState.vidList = [];
+  vidChange(){
+    console.log("This works");
   }
 
   //the actual fetcher of videos
   vidGrab(){
-    axios.get("https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&allThreadsRelatedToChannelId=UCDN5MWIT0kbAWwsxTHFgt_g&key=AIzaSyB2WdeBFHh2GQeOQjPtSmy1eW3f3ht-fAs")
-      .then(response => {
+    axios.get(baseYoutubeURL)
+      .then((response) => {
         this.setState({vidList: response.data.items}, function(){
           console.log(this.state.vidList);
         });
@@ -41,13 +44,6 @@ class Youtube extends Component {
       .catch(function (error){
         console.log(error);
       });
-
-    /*
-      axios.get('GET',
-        '/youtube/v3/channels',
-        {'id': 'UCLn0jCRt_zJfsMhR1WFswzw',
-         'part': 'snippet,contentDetails,statistics'})
-    */
   }
 
   render() {
@@ -65,10 +61,12 @@ class Youtube extends Component {
         <div className="container youtube-thumb">
           <div className="youtube-thumbs-main">
             <ul>
-              <li><img src={this.vidThumb + 0} alt="thumbSlot1"></img></li>
-              <li><img src={this.vidThumb + 1} alt="thumbSlot2"></img></li>
-              <li><img src={this.vidThumb + 2} alt="thumbSlot3"></img></li>
-              <li><img src={this.vidThumb + 3} alt="thumbSlot4"></img></li>
+              {this.state.vidList.map((thumb, index) =>
+                <li key={index} onClick={this.vidChange}>
+                  <img alt="thumbSlot" src={thumb.snippet.thumbnails.default.url}/>
+                  <h5>{thumb.snippet.title}</h5>
+                </li>
+              )}
             </ul>
           </div>
         </div>
@@ -76,5 +74,7 @@ class Youtube extends Component {
     );
   }
 }
+
+
 
 export default Youtube;
