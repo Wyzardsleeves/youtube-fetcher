@@ -49,8 +49,8 @@ class Youtube extends Component {
   render() {
     return (
       <div>
-        <div className="container youtube-frame">
-          <div className="youtube-frame-main">
+        <div className="youtube-frame">
+          <div className="container youtube-frame-main">
             <iframe width="1120" height="630" title="mainVidFrame"
             src={"https://www.youtube.com/embed/" + this.state.currentVid}
             frameBorder="0" gesture="media" allow="encrypted-media"
@@ -58,8 +58,8 @@ class Youtube extends Component {
             </iframe>
           </div>
         </div>
-        <div className="container youtube-thumb">
-          <div className="youtube-thumbs-main">
+        <div className="youtube-thumb">
+          <div className="container youtube-thumbs-main">
             <ul>
               {this.state.vidList.map((thumb, index) =>
                 <li key={index} onClick={this.vidChange}>

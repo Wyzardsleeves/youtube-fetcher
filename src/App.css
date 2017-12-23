@@ -1,3 +1,32 @@
 .App {
   text-align: center;
 }
+
+ul{
+  display: inline;
+}
+
+.youtube-thumb{
+  display: inline;
+}
+
+.youtube-thumbs-main{
+  display: inline;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.youtube-thumbs-main ul{
+  width: 100%;
+  list-style: none;
+  display: inline-block;
+}
+.youtube-thumbs-main ul li{
+  display: inline-block;
+  padding: 1%;
+  margin: 0;
+}
+.youtube-thumbs-main ul li h5{
+  padding: 0;
+  margin: 0;
+}
