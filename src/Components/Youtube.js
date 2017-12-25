@@ -61,9 +61,9 @@ class Youtube extends Component {
         <div className="youtube-thumb">
           <div className="container youtube-thumbs-main">
             <ul>
-              {this.state.vidList.map((thumb, index) =>
+              {this.state.vidList.splice(1).map((thumb, index) =>
                 <li key={index} onClick={this.vidChange}>
-                  <img alt="thumbSlot" src={thumb.snippet.thumbnails.default.url}/>
+                  <img alt="thumbSlot" src={thumb.snippet.thumbnails.medium.url}/>
                   <h5>{thumb.snippet.title}</h5>
                 </li>
               )}

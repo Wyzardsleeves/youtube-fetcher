@@ -26,6 +26,10 @@ ul{
   padding: 1%;
   margin: 0;
 }
+.youtube-thumbs-main ul li img{
+  max-width: 200px;
+  min-width: 150px;
+}
 .youtube-thumbs-main ul li h5{
   padding: 0;
   margin: 0;
