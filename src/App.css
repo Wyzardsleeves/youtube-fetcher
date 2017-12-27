@@ -1,30 +1,43 @@
 .App {
   text-align: center;
+  background-color: #101010;
+  color: #f0f0f0;
 }
 
-ul{
-  display: inline;
+.youtube{
+  width: 100%;
 }
 
 .youtube-thumb{
   display: inline;
 }
-
+.youtube-frame{
+  /* width: 100%; */
+  background-color: #555555;
+  padding: 15px;
+  border-top: 30px solid #333333;
+}
 .youtube-thumbs-main{
   display: inline;
   margin: 0;
-  padding: 0;
   width: 100%;
 }
 .youtube-thumbs-main ul{
-  width: 100%;
+  width: inherit;
+  margin: 0;
   list-style: none;
   display: inline-block;
+  background-color: #333333;
 }
 .youtube-thumbs-main ul li{
   display: inline-block;
   padding: 1%;
   margin: 0;
+}
+.youtube-thumbs-main ul li:hover{
+  cursor: pointer;
+  color: #333333;
+  background-color: #f0f0f0;
 }
 .youtube-thumbs-main ul li img{
   max-width: 200px;

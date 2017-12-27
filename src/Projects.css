@@ -1,0 +1,19 @@
+.project-head{
+  background-image: url("assets/images/coffee-laptop.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: 100% auto;
+  height: 250px;
+  width: 100%;
+}
+.project-head h3{
+  font-size: 50px;
+  position: relative;
+  top: 40%;
+  margin: 0 auto;
+}
+
+.project-list{
+  
+}

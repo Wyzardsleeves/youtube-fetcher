@@ -4,8 +4,6 @@ import Projects from "./Components/Projects";
 import Subhead from "./Components/Subhead";
 import Mainhead from "./Components/Mainhead";
 import RightPanel from "./Components/RightPanel";
-
-
 import './App.css';
 
 class App extends Component {
@@ -29,7 +27,6 @@ class App extends Component {
             {/* Projects will be loaded here */}
             <Projects />
           </div>
-
         </div>
         <div className="right-panel">
           {/* Projects will be loaded here */}
