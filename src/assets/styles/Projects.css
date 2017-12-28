@@ -1,5 +1,5 @@
 .project-head{
-  background-image: url("assets/images/coffee-laptop.jpg");
+  background-image: url("../images/coffee-laptop.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -12,8 +12,10 @@
   position: relative;
   top: 40%;
   margin: 0 auto;
+  text-shadow: 4px 4px 4px black;
+
 }
 
 .project-list{
-  
+
 }
