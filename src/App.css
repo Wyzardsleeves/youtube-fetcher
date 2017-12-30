@@ -5,6 +5,10 @@
 }
 
 /* container */
+.slim{
+  margin: 0 15%;
+  width: 70%;
+}
 
 .youtube{
   width: 100%;
@@ -25,6 +29,7 @@
   width: 100%;
 }
 .youtube-thumbs-main ul{
+  padding: 0;
   width: inherit;
   margin: 0;
   list-style: none;

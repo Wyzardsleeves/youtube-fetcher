@@ -3,19 +3,75 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  background-size: 100% auto;
+  background-size: cover;
   height: 250px;
-  width: 100%;
 }
 .project-head h3{
   font-size: 50px;
   position: relative;
-  top: 40%;
+  top: 35%;
   margin: 0 auto;
   text-shadow: 4px 4px 4px black;
 
 }
+/*
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+*/
 
 .project-list{
+  /* stuff may go here */
+}
+.project-list img{
+  width: 100%;
+}
 
+.model-1{
+  display: flex;
+}
+.model-1 aside{
+  display: inline-block;
+  width: 50%;
+  background-color: #f9a624;
+}
+.model-1 article{
+  width: 50%;
+  background-color: #444444;
+}
+
+.model-2{
+  display: flex;
+}
+.model-2 aside{
+  width: 50%;
+  background-color: #444444;
+}
+.model-2 article{
+  width: 50%;
+  background-color: #f78f8f;
+}
+
+.model-3{
+  display: flex;
+}
+.model-3 aside{
+  width: 50%;
+  background-color: #3e4e50;
+}
+.model-3 article{
+  width: 50%;
+  background-color: #444444;
+}
+
+.model-4{
+  display: flex;
+}
+.model-4 aside{
+  width: 50%;
+  background-color: #444444;
+}
+.model-4 article{
+  width: 50%;
+  background-color: #d1cc4d;
 }

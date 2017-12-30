@@ -3,18 +3,44 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  background-size: 100% auto;
+  background-size: cover;
   height: 250px;
-  width: 100%;
+  width: auto;
 }
 .subhead-head h3{
   font-size: 50px;
   position: relative;
-  top: 40%;
+  top: 35%;
   margin: 0 auto;
   text-shadow: 4px 4px 4px black;
 }
 
+/* Body Links */
 .subhead-body{
   text-align: left;
+}
+.subhead-body ul{
+  padding: 0;
+}
+.subhead-body ul li{
+  margin: 0 20px 0 0;
+  display: inline-block;
+  list-style: none;
+}
+.subhead-body ul li a{
+  color: #f0f0f0;
+}
+.subhead-body ul li:hover a{
+  color: #f78f8f;
+}
+.subhead-body ul li a i{
+  margin: 0 5px 0 0;
+  font-size: 25px;
+}
+.subhead-body ul li a h5{
+  margin: 5px;
+  position: relative;
+  bottom: 3px;
+  font-size: 15px;
+  display: inline-block;
 }
