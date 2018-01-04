@@ -7,6 +7,7 @@
   height: 250px;
 }
 .project-head h3{
+  font-family: 'Orbitron', sans-serif;
   font-size: 50px;
   position: relative;
   top: 35%;
@@ -25,22 +26,28 @@ transform: translateY(-50%);
 }
 .project-list img{
   width: 100%;
-}
-
-.model-1{
   display: flex;
 }
-.model-1 aside{
-  display: inline-block;
+
+.ion{
+  font-size: 50px;
+  margin: 10px 0;
+}
+.model-1 a{
+  display: flex;
+}
+.model-1 a aside{
   width: 50%;
   background-color: #f9a624;
 }
-.model-1 article{
+.model-1 a article{
   width: 50%;
   background-color: #444444;
 }
 
 .model-2{
+}
+.model-2 a{
   display: flex;
 }
 .model-2 aside{
@@ -53,6 +60,9 @@ transform: translateY(-50%);
 }
 
 .model-3{
+
+}
+.model-3 a{
   display: flex;
 }
 .model-3 aside{
@@ -65,6 +75,9 @@ transform: translateY(-50%);
 }
 
 .model-4{
+
+}
+.model-4 a{
   display: flex;
 }
 .model-4 aside{
