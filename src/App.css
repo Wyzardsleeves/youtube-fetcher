@@ -10,6 +10,34 @@
   width: 70%;
 }
 
+.mainhead{
+  padding: 20px 0;
+}
+.github-head{
+  display: inline;
+}
+.github-head a{
+  text-decoration: none;
+  color: #f0f0f0;
+}
+.github-head a:hover{
+  color: #f78f8f;
+}
+
+.github-head i, .github-head p{
+  margin: 5px;
+  display: inline;
+  font-size:
+}
+.github-head i{
+  font-size: 28px;
+}
+.github-head p{
+  position:relative;
+  top: -2px;
+  font-size: 18px;
+}
+
 .youtube{
   width: 100%;
 }

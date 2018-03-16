@@ -11,7 +11,14 @@ class Mainhead extends Component {
   render(){
     return(
       <div className="mainhead-contain">
-        <h2>Title</h2>
+        <div className="github-head">
+          <a href="https://github.com/Wyzardsleeves/youtube-fetcher" target="_blank">
+            <strong>
+              <i className="ion-social-github-outline"></i>
+              <p>Github for this site</p>
+            </strong>
+          </a>
+        </div>
       </div>
     )
   }

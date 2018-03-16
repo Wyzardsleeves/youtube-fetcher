@@ -17,7 +17,7 @@ class Youtube extends Component {
     super(props);
     this.state = {
       currentVid: 'TGEqyjDAnpk',
-      vidList: []
+      vidList: [],
     };
   };
 
@@ -28,8 +28,14 @@ class Youtube extends Component {
   };
 
   //function makes the thumbnail the main vid
-  vidChange(){
-    console.log("This works");
+  vidChange(e){
+    console.log(e);
+    let tempUse = e;
+    if(tempUse){// == "youtube#video"){
+      this.setState({currentVid: e.id.videoId}, function(){
+        console.log(this.state.currentVid);
+      })
+    }
   }
 
   //the actual fetcher of videos
@@ -60,10 +66,11 @@ class Youtube extends Component {
         <div className="youtube-thumb">
           <div className="container youtube-thumbs-main">
             <ul>
-              {this.state.vidList.splice(1).map((thumb, index) =>
-                <li key={index} onClick={this.vidChange}>
+              {this.state.vidList./*splice(1).*/map((thumb, index) =>
+                <li key={index} onClick={() => this.vidChange(thumb)}>
                   <img alt="thumbSlot" src={thumb.snippet.thumbnails.medium.url}/>
                   <h5>{thumb.snippet.title}</h5>
+                  <h5>{thumb.id.videoId}</h5>
                 </li>
               )}
             </ul>
