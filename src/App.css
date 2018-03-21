@@ -9,6 +9,9 @@
   margin: 0 15%;
   width: 70%;
 }
+.main-body{
+  float: left;
+}
 
 .mainhead{
   padding: 20px 0;
@@ -21,13 +24,12 @@
   color: #f0f0f0;
 }
 .github-head a:hover{
-  color: #f78f8f;
+  color: #f9a624;
 }
 
 .github-head i, .github-head p{
   margin: 5px;
   display: inline;
-  font-size:
 }
 .github-head i{
   font-size: 28px;
@@ -38,6 +40,7 @@
   font-size: 18px;
 }
 
+/* Youtube Component */
 .youtube{
   width: 100%;
 }
@@ -81,6 +84,28 @@
 .youtube-thumbs-main ul li h5{
   padding: 0;
   margin: 0;
+}
+
+/* RightPanel Component */
+.right-panel{
+  position: fixed;
+  right: 0;
+  height: 100%;
+  border-left: white solid 2px;
+  background-color: rgba(240, 240, 240, 0.6);
+  width: 0px;
+  transition: 0.5s;
+}
+.right-panel:hover{
+  width: 200px;
+}
+.right-panel ul{
+  list-style: none;
+  padding: 0;
+
+}
+.right-panel li a{
+  text-decoration: none;
 }
 
 /*

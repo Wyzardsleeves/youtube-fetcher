@@ -1,0 +1,46 @@
+/* Right Menu */
+.right-menu{
+  height: 100%;
+  text-align: left;
+  padding: 0 0 0 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+.right-menu a:hover{
+  color: #f9a624;
+}
+.right-menu i{
+  font-size: 35px;
+  position: relative;
+  top: -30px;
+  right: 90px;
+  padding: 20px;
+}
+.right-menu i:hover{
+  color: #f9a624;
+  cursor: pointer;
+}
+
+/* Top Menu */
+.top-menu{
+  font-size: 28px;
+  line-height: 5px;
+  position: absolute;
+  top: 0;
+}
+.top-menu li:hover{
+  cursor: pointer;
+}
+.top-menu li:last-child{
+  color: red;
+}
+
+/* Bottom Menu */
+.bottom-menu{
+  font-size: 20px;
+  line-height: 5px;
+  position: absolute;
+  bottom: 10px;
+}
+.bottom-menu a{
+  color: white;
+}

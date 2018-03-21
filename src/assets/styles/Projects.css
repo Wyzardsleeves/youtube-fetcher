@@ -28,13 +28,20 @@ transform: translateY(-50%);
   width: 100%;
   display: flex;
 }
+.project-list a{
+  color: white;
+  text-decoration: none;
+}
 
 .ion{
-  font-size: 50px;
-  margin: 10px 0;
+  font-size: 60px;
+  margin: 30px 0 15px 0;
 }
 .model-1 a{
   display: flex;
+}
+.model-1 a:hover{
+  color: #4f9ff9;
 }
 .model-1 a aside{
   width: 50%;
@@ -45,7 +52,8 @@ transform: translateY(-50%);
   background-color: #444444;
 }
 
-.model-2{
+.model-2 a:hover{
+  color: #4f9ff9;
 }
 .model-2 a{
   display: flex;
@@ -59,8 +67,8 @@ transform: translateY(-50%);
   background-color: #f78f8f;
 }
 
-.model-3{
-
+.model-3 a:hover{
+  color: #4f9ff9;
 }
 .model-3 a{
   display: flex;
@@ -74,8 +82,8 @@ transform: translateY(-50%);
   background-color: #444444;
 }
 
-.model-4{
-
+.model-4 a:hover{
+  color: #4f9ff9;
 }
 .model-4 a{
   display: flex;
