@@ -86,6 +86,25 @@
   margin: 0;
 }
 
+.youtube-thumbs-main .arrow-vid{
+  background-color: #333333;
+  margin: 0;
+  padding: 0;
+  width:inherit;
+}
+.youtube-thumbs-main .arrow-vid .ion{
+  margin: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 30px;
+  width: 70%;
+}
+.youtube-thumbs-main .arrow-vid .ion:hover{
+  color: #333333;
+  background-color: #f0f0f0;
+}
+
 /* RightPanel Component */
 .right-panel{
   position: fixed;

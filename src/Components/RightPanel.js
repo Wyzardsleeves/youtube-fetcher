@@ -5,17 +5,9 @@ class RightPanel extends Component {
   constructor(props){
     super(props);
     this.state = {
-      width: '1px'
-    }
-    //this.widen_menu = this.widen_menu.bind(this);
-  }
 
-  widen_menu = (e) => {
-  let widen = this.state.width == '200px' ? '1px' : '200px';
-  this.setState({
-    width: widen
-  })
-}
+    }
+  }
 
   render(){
     return(

@@ -18,6 +18,7 @@ class Youtube extends Component {
     this.state = {
       currentVid: 'TGEqyjDAnpk',
       vidList: [],
+      thumbIterator: 0
     };
   };
 
@@ -38,6 +39,10 @@ class Youtube extends Component {
     }
   }
 
+  thumbsAlter(){
+    
+  }
+
   //the actual fetcher of videos
   vidGrab(){
     axios.get(baseYoutubeURL)
@@ -49,6 +54,11 @@ class Youtube extends Component {
       .catch(function (error){
         console.log(error);
       });
+  }
+
+  //changes the videos being displayed
+  arrowVid(x){
+    console.log(x);
   }
 
   render() {
@@ -65,8 +75,11 @@ class Youtube extends Component {
         </div>
         <div className="youtube-thumb">
           <div className="container youtube-thumbs-main">
+            <div className="arrow-vid" onClick={() => this.arrowVid("cat")}>
+              <i className="ion ion-chevron-up"></i>
+            </div>
             <ul>
-              {this.state.vidList./*splice(1).*/map((thumb, index) =>
+              {this.state.vidList.slice(1).map((thumb, index) =>
                 <li key={index} onClick={() => this.vidChange(thumb)}>
                   <img alt="thumbSlot" src={thumb.snippet.thumbnails.medium.url}/>
                   <h5>{thumb.snippet.title}</h5>
@@ -74,6 +87,9 @@ class Youtube extends Component {
                 </li>
               )}
             </ul>
+            <div className="arrow-vid" onClick={() => this.arrowVid("dog")}>
+              <i className="ion ion-chevron-down"></i>
+            </div>
           </div>
         </div>
       </div>

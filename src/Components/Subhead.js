@@ -28,6 +28,12 @@ class Subhead extends Component {
                 </a>
               </li>
               <li>
+                <a target="_blank" href="https://twitter.com/JustintheDev1">
+                  <i className="ion-social-twitter"></i>
+                  <h5>Twitter</h5>
+                </a>
+              </li>
+              <li>
                 <a target="_blank" href="https://github.com/Wyzardsleeves/">
                   <i className="ion-social-github"></i>
                   <h5>Github</h5>
